@@ -132,7 +132,7 @@
                                     </div>
                                     <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
                                     <?php
-                                    //require_once __DIR__ .  '/vendor/emp/init.php';
+                                    require_once __DIR__ .  '/vendor/emp/init.php';
                                     //Generar el boton de Pago
                                     echo("Inicio Botton");
                                     // SDK de Mercado Pago
