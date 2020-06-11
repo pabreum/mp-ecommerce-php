@@ -19,8 +19,8 @@ function generatePayment(string $title, float $unit_price, string $picture_url)
     "number" => "22223333"
     );
     $payer->address = array(
-        "stree_name" => "False",
-        "stree_number" => 123,
+        "street_name" => "False",
+        "street_number" => 123,
         "zip_code" => "1111",
     );    
 
