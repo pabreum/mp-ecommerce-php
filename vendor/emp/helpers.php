@@ -12,7 +12,7 @@ function getBackUrl(string $subDomain = "")
 
 function getHtml(string $preferenceId = "")  
 {
-    $button = '<a href="'.$preferenceId.'">Pagar</a>';
+    $button = '<button type="button" class="mercadopago-button" onclick="location.href=\''.$preferenceId.'\'" >Pagar</button>';
     return $button;
 }
 ?>
