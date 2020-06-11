@@ -5,7 +5,7 @@ require_once __DIR__ .  '../../../vendor/autoload.php';
 
 function generatePayment(string $title, float $unit_price, string $picture_url)
 {
-    $img_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]/".substr_replace($picture_url, '', 0, 2);
+    $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]/";
     // Agrega credenciales
     MercadoPago\SDK::setAccessToken($GLOBALS['AccessToken']);
     MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
@@ -29,7 +29,7 @@ function generatePayment(string $title, float $unit_price, string $picture_url)
     $item->id = "1234";
     $item->title = $title;
     $item->description = "Dispositivo móvil de Tienda e-commerce";
-    $item->picture_url = $img_link;
+    $item->picture_url = $actual_link.substr_replace($picture_url, '', 0, 2);
     $item->quantity = 1;
     $item->unit_price = $unit_price;
     //$item->currency_id = "ARS";
@@ -51,6 +51,7 @@ function generatePayment(string $title, float $unit_price, string $picture_url)
     $preference->items = array($item);
     $preference->back_urls = getBackUrl($GLOBALS['SubDomain']);
     $preference->auto_return = "approved";
+    $preference->notification_url =  $actual_link."procesar-pago/notification.php";
     $preference->save();
     return getHtml($preference->init_point);
 }
