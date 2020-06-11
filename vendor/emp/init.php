@@ -6,7 +6,7 @@ require_once __DIR__ .  '../../../vendor/autoload.php';
 function generatePayment(string $title, float $precio, string $personName, string $personSurname, int $personDocument, string $reference)
 {
     // Agrega credenciales
-    MercadoPago\SDK::setAccessToken('TEST-1569747754257779-091703-532124b996429416ab916277a6ec2e72-143416312');
+    MercadoPago\SDK::setAccessToken($GLOBALS['AccessToken']);
 
     $payer = new MercadoPago\Payer();
     $payer->name = $personName;
