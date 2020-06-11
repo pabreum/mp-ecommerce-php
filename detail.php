@@ -131,6 +131,11 @@
                                         </h3>
                                     </div>
                                     <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                                    <?php
+                                    require_once __DIR__ .  '/vendor/emp/init.php';
+                                    //Generar el boton de Pago
+                                    echo(generatePayment("Consulta Médica", 500, "Paciente", "Genérico", 12345678));
+                                    ?>
                                 </div>
                             </div>
                         </div>
