@@ -1,3 +1,3 @@
 <?php
-echo($_REQUEST['back_url']);
+print_r($_REQUEST);
 ?>
