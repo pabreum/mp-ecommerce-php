@@ -31,7 +31,7 @@ function generatePayment(string $title, float $unit_price, string $picture_url)
     $item->description = "Dispositivo móvil de Tienda e-commerce";
     $item->picture_url = $img_link;
     $item->quantity = 1;
-    $item->unit_price = $precio;
+    $item->unit_price = $unit_price;
     //$item->currency_id = "ARS";
 
     $payment_methods = array(
