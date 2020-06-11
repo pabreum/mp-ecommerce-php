@@ -12,12 +12,7 @@ function getBackUrl(string $subDomain = "")
 
 function getHtml(string $preferenceId = "")  
 {
-    $button = '<form action="vendor/emp/payment.php" method="POST">
-                    <script
-                        src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
-                            data-preference-id="'.$preferenceId.'">
-                    </script>
-               </form>';
+    $button = '<a href="'.$preferenceId.'">Pagar</a>';
     return $button;
 }
 ?>
