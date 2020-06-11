@@ -4,7 +4,7 @@ Ejemplo de Uso
 AccessToken y SubDomain
 
 -Paso 2 Decidir que accion ejecutar en
-/vendor/procesar-pago
+/vendor/emp/procesar-pago/
 failure.php
 pending.php
 success.php

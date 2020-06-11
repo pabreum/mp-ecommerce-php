@@ -3,9 +3,9 @@ function getBackUrl(string $subDomain = "")
 {
     $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]/";
     $back_urls = array(
-        "success" => $actual_link . $subDomain . "/vendor/procesar-pago/success.php",
-        "failure" => $actual_link . $subDomain . "/vendor/procesar-pago/failure.php",
-        "pending" => $actual_link . $subDomain . "/vendor/procesar-pago/pending.php"
+        "success" => $actual_link . $subDomain . "procesar-pago/success.php",
+        "failure" => $actual_link . $subDomain . "procesar-pago/failure.php",
+        "pending" => $actual_link . $subDomain . "procesar-pago/pending.php"
     );
     return $back_urls;
 }
