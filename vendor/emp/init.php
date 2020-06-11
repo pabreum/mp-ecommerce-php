@@ -39,6 +39,6 @@ function generatePayment(string $title, float $precio, string $personName, strin
     $preference->back_urls = getBackUrl($GLOBALS['SubDomain']);
     //$preference->binary_mode = true;
     $preference->save();
-    return getHtml($preference->id);
+    return getHtml($preference->init_point);
 }
 ?>
