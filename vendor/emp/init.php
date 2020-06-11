@@ -36,7 +36,7 @@ function generatePayment(string $title, float $precio, string $personName, strin
     $preference->payment_methods = $payment_methods;
     $preference->external_reference = $reference;
     $preference->items = array($item);
-    $preference->back_urls = getBackUrl('');
+    $preference->back_urls = getBackUrl($GLOBALS['SubDomain']);
     //$preference->binary_mode = true;
     $preference->save();
     return getHtml($preference->id);
