@@ -130,16 +130,10 @@
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
                                     <?php
                                     require_once __DIR__ .  '/vendor/emp/init.php';
                                     //Generar el boton de Pago
-                                    echo("Inicio Botton");
-                                    // SDK de Mercado Pago
-                                    //require __DIR__ .  '/vendor/autoload.php';
-                                    //MercadoPago\SDK::setAccessToken("TEST-1569747754257779-091703-532124b996429416ab916277a6ec2e72-143416312");
-                                    echo(generatePayment("Consultaa", 500, "Paciente", "Generico", 12345678,"refe"));
-                                    echo("Fin Botton");
+                                    echo(generatePayment($_POST['title'], $_POST['price'], "Paciente", "Generico", 12345678,"refe"));
                                     ?>
                                 </div>
                             </div>
