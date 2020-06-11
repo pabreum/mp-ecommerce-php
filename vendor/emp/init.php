@@ -24,7 +24,6 @@ function generatePayment(string $title, float $unit_price, string $picture_url)
         "zip_code" => "1111",
     );    
 
-
     $item = new MercadoPago\Item();
     $item->id = "1234";
     $item->title = $title;

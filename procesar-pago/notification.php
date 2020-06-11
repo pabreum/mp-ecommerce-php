@@ -3,7 +3,6 @@ require_once __DIR__ .  '../../vendor/emp/config.php';
 require_once __DIR__ .  '../../vendor/autoload.php';
 
 MercadoPago\SDK::setAccessToken($GLOBALS['AccessToken']);
-
 switch($_POST["type"]) {
     case "payment":
         $payment = MercadoPago\Payment.find_by_id($_POST["id"]);
@@ -26,5 +25,5 @@ switch($_POST["type"]) {
         //file_put_contents($_POST["id"].".txt", $plan);
         break;
 }
-
+file_put_contents("hola.txt",json_encode($_POST));
 ?>
