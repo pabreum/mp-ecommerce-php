@@ -1,3 +1,4 @@
 <?php
-echo($_REQUEST['back_url']);
+print_r($_REQUEST);
 ?>
+<script src="https://www.mercadopago.com/v2/security.js" view="pending"></script>

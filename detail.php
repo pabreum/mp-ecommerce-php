@@ -130,10 +130,10 @@
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
+                                    <script src="https://www.mercadopago.com/v2/security.js" view="detail"></script>
                                     <?php
-                                    require_once __DIR__ .  '/vendor/emp/init.php';
-                                    //Generar el boton de Pago
-                                    echo(generatePayment($_POST['title'], $_POST['price'], "Paciente", "Generico", 12345678,"refe"));
+                                     require_once __DIR__ .  '/vendor/emp/init.php';
+                                    echo(generatePayment($_POST['title'], $_POST['price'], $_POST['img']));
                                     ?>
                                 </div>
                             </div>
