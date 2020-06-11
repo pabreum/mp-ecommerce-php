@@ -138,7 +138,7 @@
                                     // SDK de Mercado Pago
                                     //require __DIR__ .  '/vendor/autoload.php';
                                     //MercadoPago\SDK::setAccessToken("TEST-1569747754257779-091703-532124b996429416ab916277a6ec2e72-143416312");
-                                    echo(generatePayment("Consultaa", 500, "Paciente", "Generico", 12345678));
+                                    echo(generatePayment("Consultaa", 500, "Paciente", "Generico", 12345678,"refe"));
                                     echo("Fin Botton");
                                     ?>
                                 </div>
