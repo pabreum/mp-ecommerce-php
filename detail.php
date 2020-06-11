@@ -134,7 +134,8 @@
                                     <?php
                                     require_once __DIR__ .  '/vendor/emp/init.php';
                                     //Generar el boton de Pago
-                                    echo(generatePayment("Consulta Médica", 500, "Paciente", "Genérico", 12345678));
+                                    echo("Hola");
+                                    //echo(generatePayment("Consulta Médica", 500, "Paciente", "Genérico", 12345678));
                                     ?>
                                 </div>
                             </div>
