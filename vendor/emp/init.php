@@ -7,6 +7,7 @@ function generatePayment(string $title, float $precio, string $personName, strin
 {
     // Agrega credenciales
     MercadoPago\SDK::setAccessToken($GLOBALS['AccessToken']);
+    MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
 
     $payer = new MercadoPago\Payer();
     $payer->name = $personName;
