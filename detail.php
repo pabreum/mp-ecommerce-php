@@ -136,9 +136,9 @@
                                     //Generar el boton de Pago
                                     echo("Inicio Botton");
                                     // SDK de Mercado Pago
-                                    require __DIR__ .  '/vendor/autoload.php';
-                                    MercadoPago\SDK::setAccessToken("TEST-1569747754257779-091703-532124b996429416ab916277a6ec2e72-143416312");
-                                    //echo(generatePayment("Consulta Médica", 500, "Paciente", "Genérico", 12345678));
+                                    //require __DIR__ .  '/vendor/autoload.php';
+                                    //MercadoPago\SDK::setAccessToken("TEST-1569747754257779-091703-532124b996429416ab916277a6ec2e72-143416312");
+                                    echo(generatePayment("Consultaa", 500, "Paciente", "Generico", 12345678));
                                     echo("Fin Botton");
                                     ?>
                                 </div>
