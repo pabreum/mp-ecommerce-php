@@ -25,5 +25,8 @@ switch($_POST["type"]) {
         //file_put_contents($_POST["id"].".txt", $plan);
         break;
 }
-file_put_contents("hola.txt",json_encode($_POST));
+
+file_put_contents("webhooks.txt",json_encode($_POST));
+file_put_contents("webhooks2.txt",file_get_contents("php://input"));
+mail('pabreu.ar@gmail.com', 'Mi título', file_get_contents("php://input"));
 ?>
